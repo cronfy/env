@@ -5,7 +5,7 @@ Provides framework agnostic access to environment data, that can be loaded as ar
 Example:
 
 ```php
-// any environment loader can be used, we just need $anvironment to be an array
+// any environment loader can be used, we just need $environment to be an array
 $environment = (new josegonzalez\Dotenv\Loader(__DIR__ . '/.env'))
     ->parse()
     ->toArray();

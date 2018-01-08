@@ -12,7 +12,7 @@ class Env {
      * @return bool
      */
     public static function isDebug($value = null) {
-        if (!$value !== null) {
+        if ($value !== null) {
             static::$debug = (bool) $value;
         }
 
@@ -42,10 +42,18 @@ class Env {
 
     /**
      * Load environment data
-     * @param $data
+     * @param array $data
      */
     public static function load($data) {
         static::$_env = $data;
+    }
+
+    /**
+     * Get all environment
+     * @return array
+     */
+    public static function export() {
+        return static::$_env;
     }
 
     /**
