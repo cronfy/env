@@ -1,0 +1,15 @@
+{
+  "name": "cronfy/env",
+  "license": "MIT",
+  "description": "PHP environment",
+
+  "require": {
+    "php": ">=5.4.0"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "cronfy\\env\\": "src/"
+    }
+  }
+}
