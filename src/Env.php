@@ -26,16 +26,20 @@ class Env {
     protected static $vendorDir;
 
     /**
-     * Helper function to get/set vendor directory
+     * Helper function to get vendor directory
+     * @return bool
+     */
+    public static function getVendorDir() {
+        return static::$vendorDir ?: dirname(dirname(dirname(__DIR__)));
+    }
+
+    /**
+     * Set vendor directory
      * @param string $value
      * @return bool
      */
-    public static function getVendorDir($value) {
-        if (!$value !== null) {
-            static::$vendorDir = $value;
-        }
-
-        return static::$vendorDir ?: dirname(dirname(dirname(__DIR__)));
+    public static function setVendorDir($value) {
+        static::$vendorDir = $value;
     }
 
     static protected $_env;
